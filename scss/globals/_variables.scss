@@ -1,0 +1,21 @@
+:root {
+    // font family
+    --ff-barlow-condensed: 'Barlow Semi Condensed', sans-serif;
+
+    // background color
+    --bg-clr: hsl(210, 46%, 95%);
+
+    // card color
+    --moderate-violet: hsl(263, 55%, 52%);
+    --x-d-grayish-blue: hsl(217, 19%, 35%);
+    --x-d-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    // text color
+    --light-gray: hsl(0, 0%, 81%);
+    --light-gray-opcty-fifty: hsl(0, 0%, 81%, .50);
+    --light-gray-opcty-seventy: hsl(0, 0%, 81%, .70);
+
+    --x-d-grayish-blue-o-fifty: hsl(217, 19%, 35%, .50);
+    --x-d-grayish-blue-o-seventy: hsl(217, 19%, 35%, .70);
+}

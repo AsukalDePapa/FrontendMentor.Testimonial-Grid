@@ -1,0 +1,54 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/functions' as f;
+
+section {
+    display: grid;
+    place-content: center;
+    gap: f.rem(24);
+    grid-template-areas: 
+        'daniel'
+        'jonathan'
+        'jeanette'
+        'patrick'
+        'kira';
+
+    @include bp.breakpointMin(medium-screen) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            'daniel daniel'
+            'jonathan kira'
+            'jeanette kira'
+            'patrick patrick';
+    }
+
+    @include bp.breakpointMin(large-screen) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            'daniel daniel jeanette'
+            'kira jonathan jonathan'
+            'kira patrick patrick';
+    }
+
+    @include bp.breakpointMin(xlarge-screen) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            'daniel daniel jonathan kira'
+            'jeanette patrick patrick kira';
+    }
+}
+
+.testimonial-card:nth-child(1) {
+    grid-area: daniel;
+}
+.testimonial-card:nth-child(2) {
+    grid-area: jonathan;
+}
+.testimonial-card:nth-child(3) {
+    grid-area: jeanette;
+}
+.testimonial-card:nth-child(4) {
+    grid-area: patrick;
+}
+.testimonial-card:nth-child(5) {
+    grid-area: kira;
+}

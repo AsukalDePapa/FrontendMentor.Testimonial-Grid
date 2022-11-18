@@ -1,0 +1,110 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/functions' as f;
+
+section {
+    margin-block: f.rem(100);
+    width: min(90%, f.rem(1200));
+}
+
+.testimonial-card{
+    // background-color: red !important;
+    border-radius: f.rem(10);
+    padding: f.rem(32) f.rem(40);
+    width: 100%;
+
+    .profile {
+        display: flex;
+        gap: f.rem(16);
+        align-items: center;
+        margin-bottom: f.rem(16);
+
+        img {
+            border-radius: 50%;
+            width: f.rem(40);
+            height: f.rem(40);
+            border: var(--white) 1px solid;
+        }
+
+        .name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+
+            h2 {
+                font-weight: 500;
+                font-size: f.rem(18);
+                color: var(--light-gray);
+            }
+
+            span {
+                font-size: f.rem(15);
+                color: var(--light-gray-opcty-fifty);
+            }
+        }
+    }
+
+    .testimonials {
+        .user-testimonial {
+            color: var(--white);
+            font-weight: 600;
+            font-size: f.rem(24);
+            margin-bottom: f.rem(24);
+        }
+
+        .user-review {
+            color: var(--light-gray-opcty-seventy);
+            font-size: f.rem(14);
+            word-spacing: 1px;
+            line-height: 1.5;
+        }
+    }
+}
+
+.color-reset {
+    .profile {
+        .name {
+            h2 {
+                color: var(--x-d-grayish-blue);
+            }
+    
+            span {
+                color: var(--x-d-grayish-blue-o-fifty);
+            }
+        }
+    }
+
+    .testimonials {
+        .user-testimonial {
+            color: var(--x-d-grayish-blue);
+        }
+
+        .user-review {
+            color: var(--x-d-grayish-blue-o-seventy);
+        }
+    }
+}
+
+.first-testimonial {
+    background-color: var(--moderate-violet);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-size: f.rem(125);
+}
+
+.second-testimonial {
+    background-color: var(--x-d-grayish-blue);
+}
+
+.third-testimonial {
+    background-color: var(--white);
+}
+
+.fourth-testimonial {
+    background-color: var(--x-d-blackish-blue);
+}
+
+.fifth-testimonial {
+    background-color: var(--white);
+}
